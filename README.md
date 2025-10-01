@@ -16,7 +16,8 @@
 
 [**Ver Código no GitHub**](https://github.com/galafis/Code-Assistant/) | [**Documentação Completa**](https://github.com/galafis/Code-Assistant/blob/main/README.md/)
 
-![Advanced Code Assistant](./advanced-hero-image.png)
+![Advanced Code Assistant](./new-advanced-hero-image.png)
+
 
 \n![Collaboration Flow](./frontend/assets/collaboration-flow.png)\n\n![Concept Flow Diagram](./frontend/assets/concept-flow-diagram.png)
 
