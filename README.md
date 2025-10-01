@@ -72,23 +72,39 @@ O diagrama a seguir ilustra a arquitetura do Assistente de Código com IA Avanç
 
 ```mermaid
 graph TD
-    subgraph "Frontend"
-        A[Editor Monaco] --> B{WebSocket Client}
-        A --> C{API REST Client}
+    subgraph "Frontend Interface"
+        A[Editor Monaco] --> B[WebSocket Client]
+        A --> C[REST API Client]
+        D[Interface de Colaboração] --> B
+        E[Painel de Análise] --> C
     end
 
-    subgraph "Backend (Flask)"
-        B --> D[WebSocket Server]
-        C --> E[API REST Server]
-        D --> F{Engine de Colaboração}
-        E --> G{Engine do Assistente de IA}
+    subgraph "Backend Flask"
+        B --> F[WebSocket Server]
+        C --> G[REST API Server]
+        F --> H[Engine de Colaboração]
+        G --> I[Engine do Assistente IA]
+        G --> J[Analisador de Código]
+        G --> K[Gerador de Testes]
     end
 
-    subgraph "Inteligência Artificial"
-        G --> H[Large Language Model (LLM)]
+    subgraph "Serviços de IA"
+        I --> L[OpenAI API]
+        J --> M[Análise Estática]
+        K --> N[Template Engine]
     end
 
-    F --> B
+    subgraph "Armazenamento"
+        H --> O[(Session Storage)]
+        I --> P[(Code History)]
+        J --> Q[(Analysis Cache)]
+    end
+
+    subgraph "Colaboração em Tempo Real"
+        H --> R[Room Management]
+        R --> S[User Sessions]
+        S --> T[Code Synchronization]
+    end
 ```
 
 ### Como Executar o Projeto
