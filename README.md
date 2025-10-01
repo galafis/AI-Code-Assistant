@@ -76,38 +76,38 @@ O diagrama a seguir ilustra a arquitetura do Assistente de Código Avançado com
 
 ```mermaid
 graph TD
-    subgraph "Frontend Interface"
-        A[Editor Monaco] --> B[WebSocket Client]
-        A --> C[REST API Client]
+    subgraph "Interface Frontend"
+        A[Editor Monaco] --> B(Cliente WebSocket)
+        A --> C(Cliente API REST)
         D[Interface de Colaboração] --> B
         E[Painel de Análise] --> C
     end
 
-    subgraph "Backend Flask"
-        B --> F[WebSocket Server]
-        C --> G[REST API Server]
-        F --> H[Engine de Colaboração]
-        G --> I[Engine do Assistente de Código]
-        G --> J[Analisador de Código]
-        G --> K[Gerador de Testes]
+    subgraph "Backend (Flask)"
+        B --> F(Servidor WebSocket)
+        C --> G(Servidor API REST)
+        F --> H(Motor de Colaboração)
+        G --> I(Motor do Assistente Inteligente)
+        G --> J(Analisador de Código)
+        G --> K(Gerador de Testes)
     end
 
     subgraph "Serviços de Inteligência Artificial"
-        I --> L[OpenAI API]
-        J --> M[Análise Estática]
-        K --> N[Template Engine]
+        I --> L(API OpenAI)
+        J --> M(Análise Estática)
+        K --> N(Motor de Template)
     end
 
     subgraph "Armazenamento"
-        H --> O[(Session Storage)]
-        I --> P[(Code History)]
-        J --> Q[(Analysis Cache)]
+        H --> O[(Armazenamento de Sessão)]
+        I --> P[(Histórico de Código)]
+        J --> Q[(Cache de Análise)]
     end
 
     subgraph "Colaboração em Tempo Real"
-        H --> R[Room Management]
-        R --> S[User Sessions]
-        S --> T[Code Synchronization]
+        H --> R(Gerenciamento de Salas)
+        R --> S(Sessões de Usuário)
+        S --> T(Sincronização de Código)
     end
 ```
 
@@ -186,15 +186,15 @@ The following diagram illustrates the architecture of the Advanced Code Assistan
 ```mermaid
 graph TD
     subgraph "Frontend"
-        A[Monaco Editor] --> B{WebSocket Client}
-        A --> C{API REST Client}
+        A[Monaco Editor] --> B(WebSocket Client)
+        A --> C(API REST Client)
     end
 
     subgraph "Backend (Flask)"
-        B --> D[WebSocket Server]
-        C --> E[API REST Server]
-        D --> F{Collaboration Engine}
-        E --> G{Intelligent Assistant Engine}
+        B --> D(WebSocket Server)
+        C --> E(API REST Server)
+        D --> F(Collaboration Engine)
+        E --> G(Intelligent Assistant Engine)
     end
 
     subgraph "Artificial Intelligence"
