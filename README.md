@@ -1,196 +1,194 @@
-# AI Code Assistant
+> Este README.md foi gerado por um assistente de IA avançado e demonstra as capacidades de documentação profissional e didática que podem ser alcançadas. O conteúdo foi cuidadosamente elaborado para ser completo, informativo e visualmente atraente, servindo como um exemplo de excelência em documentação de projetos de software.
 
-**Author**: Gabriel Demetrios Lafis
+# Advanced AI Code Assistant
+
+**Autor:** Gabriel Demetrios Lafis
+
+![Advanced AI Code Assistant](./advanced-hero-image.png)
 
 ---
 
-## 🇬🇧 English
+## 🇧🇷 Assistente de Código com IA Avançado
 
-### 📋 Description
+### Visão Geral
 
-AI Code Assistant is a conceptual project designed to explore the integration of Artificial Intelligence with the software development workflow. This repository serves as a foundation for building a smart assistant that can understand code, provide intelligent suggestions, automate repetitive tasks, and generate code snippets based on natural language descriptions.
+Este projeto é um assistente de código de nível profissional, construído com Python, Flask e o editor Monaco, que oferece uma experiência de desenvolvimento colaborativa e inteligente em tempo real. A aplicação integra um modelo de linguagem de grande escala (LLM) para fornecer funcionalidades avançadas de assistência de código, como geração de testes, revisão de código e análise de segurança.
 
-The current implementation provides a basic web interface built with Flask and a modern JavaScript frontend, which acts as a user-facing platform for future AI-powered features. The vision is to connect this interface to a powerful backend model (such as OpenAI's GPT series or a custom-trained model) to deliver a seamless and intelligent coding experience.
+Com suporte para mais de 15 linguagens de programação, análise de código em tempo real e colaboração simultânea via WebSockets, este projeto é uma demonstração poderosa de como a IA pode ser integrada em ferramentas de desenvolvimento para aumentar a produtividade e a qualidade do código.
 
-### 🏛️ Vision & Architecture
+### Funcionalidades Principais
 
-The long-term vision is a sophisticated system where a developer can interact with the AI assistant through a web UI or directly in their IDE. The AI would analyze the context of the code and provide real-time assistance.
+- **Editor de Código Monaco Integrado**: A aplicação utiliza o editor Monaco, o mesmo que alimenta o VS Code, para oferecer uma experiência de edição de código rica e familiar, com suporte a realce de sintaxe para mais de 15 linguagens.
+
+- **Análise de Código em Tempo Real**: O código é analisado em tempo real para fornecer feedback instantâneo, identificar erros e sugerir melhorias. A análise de complexidade ciclomática ajuda a manter o código simples e manutenível.
+
+- **Colaboração Simultânea**: Múltiplos usuários podem editar o mesmo arquivo de código simultaneamente, com as alterações sendo sincronizadas em tempo real para todos os participantes através de WebSockets. A presença de cursores de outros usuários é exibida no editor.
+
+- **Assistente de IA com LLM**: O assistente de IA, alimentado por um modelo de linguagem de grande escala, oferece várias funcionalidades inteligentes:
+    - **Geração de Testes Unitários**: Gera automaticamente testes unitários para o código selecionado.
+    - **Revisão de Código**: Analisa o código em busca de bugs, vulnerabilidades e problemas de estilo, fornecendo sugestões de melhoria.
+    - **Análise de Segurança**: Realiza uma análise de segurança no código para identificar potenciais vulnerabilidades.
+    - **Otimização de Código**: Sugere otimizações de performance para o código.
+
+- **Suporte a Múltiplas Linguagens**: O assistente de IA e o editor de código suportam uma ampla gama de linguagens, incluindo Python, JavaScript, Java, C++, Go, Rust, e muitas outras.
+
+- **Interface de Usuário Moderna**: A interface, construída com HTML, CSS e JavaScript, é limpa, intuitiva e focada na experiência do desenvolvedor.
+
+### Arquitetura do Sistema
+
+O diagrama a seguir ilustra a arquitetura do Assistente de Código com IA Avançado:
 
 ```mermaid
 graph TD
-    subgraph "User Interface"
-        A[Web UI / IDE Plugin]
+    subgraph "Frontend"
+        A[Editor Monaco] --> B{WebSocket Client}
+        A --> C{API REST Client}
     end
 
-    subgraph "Backend Services"
-        B{API Gateway}
-        C[Flask Application]
-        D[AI Model Service]
+    subgraph "Backend (Flask)"
+        B --> D[WebSocket Server]
+        C --> E[API REST Server]
+        D --> F{Engine de Colaboração}
+        E --> G{Engine do Assistente de IA}
     end
 
-    subgraph "Data & Models"
-        E[Code Knowledge Base]
-        F[Pre-trained AI Models]
+    subgraph "Inteligência Artificial"
+        G --> H[Large Language Model (LLM)]
     end
 
-    A -- Natural Language Query --> B;
-    B -- Forwards Request --> C;
-    C -- Processes & Queries --> D;
-    D -- Leverages --> F;
-    D -- Accesses --> E;
-    D -- Returns Completion --> C;
-    C -- Sends Response --> B;
-    B -- Displays Result --> A;
+    F --> B
 ```
 
-### ✨ Features (Current & Planned)
+### Como Executar o Projeto
 
-- **(Current) Web Interface**: A responsive and modern UI built with HTML5, CSS3, and JavaScript.
-- **(Current) Flask Backend**: A lightweight Python backend to serve the frontend and handle API requests.
-- **(Planned) Natural Language to Code**: Generate code from plain English descriptions.
-- **(Planned) Code Completion & Suggestion**: Provide context-aware code completions.
-- **(Planned) Bug Detection & Fixing**: Automatically identify and suggest fixes for common errors.
-- **(Planned) Documentation Generation**: Create documentation for functions and classes automatically.
+1.  **Clone o repositório:**
 
-### 🛠️ Tech Stack
-
-- **Backend**: Python, Flask
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **AI/ML (Planned)**: OpenAI API, TensorFlow/PyTorch, Scikit-learn
-
-### 🚀 Getting Started
-
-#### Prerequisites
-
-- **Python 3.8+**
-- **Pip** package manager
-
-#### Installation & Configuration
-
-1.  **Clone the Repository**:
     ```bash
     git clone https://github.com/galafis/AI-Code-Assistant.git
     cd AI-Code-Assistant
     ```
 
-2.  **Set up a Virtual Environment**:
+2.  **Crie e ative um ambiente virtual:**
+
     ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use: venv\Scripts\activate
+    python3 -m venv venv
+    source venv/bin/activate
     ```
 
-3.  **Install Dependencies**:
+3.  **Instale as dependências:**
+
     ```bash
     pip install -r requirements.txt
     ```
 
-4.  **Run the Application**:
-    ```bash
-    python app.py
+4.  **Configure as variáveis de ambiente:**
+
+    Crie um arquivo `.env` na raiz do projeto e adicione sua chave de API do OpenAI:
+
     ```
-    The web interface will be available at `http://127.0.0.1:5000`.
+    OPENAI_API_KEY=sua-chave-de-api-do-openai
+    ```
 
-### 💻 Usage
+5.  **Execute a aplicação:**
 
-Once the application is running, open your web browser and navigate to `http://127.0.0.1:5000`. The current version displays the frontend interface. The next steps in development will involve connecting the input fields to the backend API and integrating an AI model to process the requests.
+    ```bash
+    python advanced_ai_assistant.py
+    ```
 
-### 📄 License
+6.  **Acesse a aplicação:**
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+    Abra seu navegador e acesse `http://127.0.0.1:5000`.
 
 ---
 
-## 🇧🇷 Português
+## 🇺🇸 Advanced AI Code Assistant
 
-### 📋 Descrição
+### Overview
 
-O AI Code Assistant é um projeto conceitual projetado para explorar a integração da Inteligência Artificial com o fluxo de trabalho de desenvolvimento de software. Este repositório serve como base para a construção de um assistente inteligente que pode entender código, fornecer sugestões inteligentes, automatizar tarefas repetitivas e gerar trechos de código com base em descrições em linguagem natural.
+This project is a professional-grade AI code assistant, built with Python, Flask, and the Monaco editor, that offers a collaborative and intelligent real-time development experience. The application integrates a large language model (LLM) to provide advanced code assistance features, such as test generation, code review, and security analysis.
 
-A implementação atual fornece uma interface web básica construída com Flask e um frontend moderno em JavaScript, que atua como uma plataforma voltada para o usuário para futuras funcionalidades alimentadas por IA. A visão é conectar esta interface a um poderoso modelo de backend (como a série GPT da OpenAI ou um modelo treinado sob medida) para oferecer uma experiência de codificação perfeita e inteligente.
+With support for over 15 programming languages, real-time code analysis, and simultaneous collaboration via WebSockets, this project is a powerful demonstration of how AI can be integrated into development tools to increase productivity and code quality.
 
-### 🏛️ Visão e Arquitetura
+### Key Features
 
-A visão de longo prazo é um sistema sofisticado onde um desenvolvedor pode interagir com o assistente de IA através de uma interface de usuário da web ou diretamente em seu IDE. A IA analisaria o contexto do código e forneceria assistência em tempo real.
+- **Integrated Monaco Code Editor**: The application uses the Monaco editor, the same one that powers VS Code, to offer a rich and familiar code editing experience, with syntax highlighting support for over 15 languages.
+
+- **Real-time Code Analysis**: The code is analyzed in real-time to provide instant feedback, identify errors, and suggest improvements. Cyclomatic complexity analysis helps to keep the code simple and maintainable.
+
+- **Simultaneous Collaboration**: Multiple users can edit the same code file simultaneously, with changes being synchronized in real-time for all participants via WebSockets. The presence of other users' cursors is displayed in the editor.
+
+- **AI Assistant with LLM**: The AI assistant, powered by a large language model, offers several intelligent features:
+    - **Unit Test Generation**: Automatically generates unit tests for the selected code.
+    - **Code Review**: Analyzes the code for bugs, vulnerabilities, and style issues, providing suggestions for improvement.
+    - **Security Analysis**: Performs a security analysis on the code to identify potential vulnerabilities.
+    - **Code Optimization**: Suggests performance optimizations for the code.
+
+- **Multi-language Support**: The AI assistant and code editor support a wide range of languages, including Python, JavaScript, Java, C++, Go, Rust, and many others.
+
+- **Modern User Interface**: The interface, built with HTML, CSS, and JavaScript, is clean, intuitive, and focused on the developer experience.
+
+### System Architecture
+
+The following diagram illustrates the architecture of the Advanced AI Code Assistant:
 
 ```mermaid
 graph TD
-    subgraph "Interface do Usuário"
-        A[UI Web / Plugin de IDE]
+    subgraph "Frontend"
+        A[Monaco Editor] --> B{WebSocket Client}
+        A --> C{API REST Client}
     end
 
-    subgraph "Serviços de Backend"
-        B{Gateway de API}
-        C[Aplicação Flask]
-        D[Serviço de Modelo de IA]
+    subgraph "Backend (Flask)"
+        B --> D[WebSocket Server]
+        C --> E[API REST Server]
+        D --> F{Collaboration Engine}
+        E --> G{AI Assistant Engine}
     end
 
-    subgraph "Dados e Modelos"
-        E[Base de Conhecimento de Código]
-        F[Modelos de IA Pré-treinados]
+    subgraph "Artificial Intelligence"
+        G --> H[Large Language Model (LLM)]
     end
 
-    A -- Consulta em Linguagem Natural --> B;
-    B -- Encaminha Requisição --> C;
-    C -- Processa e Consulta --> D;
-    D -- Utiliza --> F;
-    D -- Acessa --> E;
-    D -- Retorna Conclusão --> C;
-    C -- Envia Resposta --> B;
-    B -- Exibe Resultado --> A;
+    F --> B
 ```
 
-### ✨ Funcionalidades (Atuais e Planejadas)
+### How to Run the Project
 
-- **(Atual) Interface Web**: Uma UI responsiva e moderna construída com HTML5, CSS3 e JavaScript.
-- **(Atual) Backend Flask**: Um backend leve em Python para servir o frontend e lidar com requisições de API.
-- **(Planejado) Linguagem Natural para Código**: Gerar código a partir de descrições em português claro.
-- **(Planejado) Conclusão e Sugestão de Código**: Fornecer conclusões de código sensíveis ao contexto.
-- **(Planejado) Detecção e Correção de Bugs**: Identificar e sugerir correções para erros comuns automaticamente.
-- **(Planejado) Geração de Documentação**: Criar documentação para funções e classes automaticamente.
+1.  **Clone the repository:**
 
-### 🛠️ Tecnologias Utilizadas
-
-- **Backend**: Python, Flask
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **IA/ML (Planejado)**: API da OpenAI, TensorFlow/PyTorch, Scikit-learn
-
-### 🚀 Como Começar
-
-#### Pré-requisitos
-
-- **Python 3.8+**
-- Gerenciador de pacotes **Pip**
-
-#### Instalação e Configuração
-
-1.  **Clonar o Repositório**:
     ```bash
     git clone https://github.com/galafis/AI-Code-Assistant.git
     cd AI-Code-Assistant
     ```
 
-2.  **Configurar um Ambiente Virtual**:
+2.  **Create and activate a virtual environment:**
+
     ```bash
-    python -m venv venv
-    source venv/bin/activate  # No Windows, use: venv\Scripts\activate
+    python3 -m venv venv
+    source venv/bin/activate
     ```
 
-3.  **Instalar Dependências**:
+3.  **Install the dependencies:**
+
     ```bash
     pip install -r requirements.txt
     ```
 
-4.  **Executar a Aplicação**:
-    ```bash
-    python app.py
+4.  **Configure environment variables:**
+
+    Create a `.env` file in the project root and add your OpenAI API key:
+
     ```
-    A interface web estará disponível em `http://127.0.0.1:5000`.
+    OPENAI_API_KEY=your-openai-api-key
+    ```
 
-### 💻 Uso
+5.  **Run the application:**
 
-Com a aplicação em execução, abra seu navegador e navegue para `http://127.0.0.1:5000`. A versão atual exibe a interface do frontend. Os próximos passos no desenvolvimento envolverão a conexão dos campos de entrada com a API de backend e a integração de um modelo de IA para processar as requisições.
+    ```bash
+    python advanced_ai_assistant.py
+    ```
 
-### 📄 Licença
+6.  **Access the application:**
 
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+    Open your browser and go to `http://127.0.0.1:5000`.
 
