@@ -13,7 +13,7 @@
 ![License](https://img.shields.io/github/license/galafis/AI-Code-Assistant?style=for-the-badge)
 ![Stars](https://img.shields.io/github/stars/galafis/AI-Code-Assistant?style=for-the-badge)
 
-[**Ver Demo Interativa**](https://galafis.github.io/AI-Code-Assistant-Demo/) | [**Documentação da API**](https://galafis.github.io/AI-Code-Assistant/api-docs)
+[**Ver Código no GitHub**](https://github.com/galafis/AI-Code-Assistant) | [**Documentação Completa**](https://github.com/galafis/AI-Code-Assistant/blob/main/README.md)
 
 ![Advanced AI Code Assistant](./advanced-hero-image.png)
 
