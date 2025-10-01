@@ -4,7 +4,14 @@
 
 **Autor:** Gabriel Demetrios Lafis
 
+![Build Status](https://img.shields.io/github/actions/workflow/status/galafis/AI-Code-Assistant/ci-cd.yml?style=for-the-badge)
+![License](https://img.shields.io/github/license/galafis/AI-Code-Assistant?style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/galafis/AI-Code-Assistant?style=for-the-badge)
+
+[**Ver Demo Interativa**](https://galafis.github.io/AI-Code-Assistant-Demo/) | [**Documentação da API**](https://galafis.github.io/AI-Code-Assistant/api-docs)
+
 ![Advanced AI Code Assistant](./advanced-hero-image.png)
+
 
 ---
 
