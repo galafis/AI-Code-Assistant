@@ -1,0 +1,58 @@
+graph TD
+    subgraph "Developer Interface"
+        A[Web UI<br/>Code Input]
+        B[IDE Plugin<br/>Future Integration]
+    end
+
+    subgraph "Processing Layer"
+        C[Flask API<br/>Request Handler]
+        D[Natural Language<br/>Processing]
+        E[Code Analysis<br/>Context Understanding]
+    end
+
+    subgraph "AI Engine (Planned)"
+        F[Large Language Model<br/>GPT/Custom Model]
+        G[Code Knowledge Base<br/>Programming Patterns]
+        H[Suggestion Engine<br/>Intelligent Recommendations]
+    end
+
+    subgraph "Output Generation"
+        I[Code Generation<br/>Snippets & Functions]
+        J[Documentation<br/>Auto-generated]
+        K[Bug Detection<br/>Error Analysis]
+    end
+
+    subgraph "Response Layer"
+        L[JSON API Response<br/>Structured Output]
+        M[Real-time Updates<br/>Live Assistance]
+    end
+
+    A --> C
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+    H --> J
+    H --> K
+    I --> L
+    J --> L
+    K --> L
+    L --> M
+    M --> A
+
+    style A fill:#2196F3,color:#fff
+    style B fill:#2196F3,color:#fff
+    style C fill:#4CAF50,color:#fff
+    style D fill:#FF9800,color:#fff
+    style E fill:#FF9800,color:#fff
+    style F fill:#9C27B0,color:#fff
+    style G fill:#9C27B0,color:#fff
+    style H fill:#9C27B0,color:#fff
+    style I fill:#F44336,color:#fff
+    style J fill:#F44336,color:#fff
+    style K fill:#F44336,color:#fff
+    style L fill:#607D8B,color:#fff
+    style M fill:#607D8B,color:#fff
