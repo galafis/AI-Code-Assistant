@@ -6,7 +6,7 @@
 
 ## Como Contribuir
 
-Ficamos felizes com o seu interesse em contribuir para o **Advanced AI Code Assistant**! Para garantir um processo de contribuição tranquilo e eficaz, siga as diretrizes abaixo.
+Ficamos felizes com o seu interesse em contribuir para o **Advanced Code Assistant**! Para garantir um processo de contribuição tranquilo e eficaz, siga as diretrizes abaixo.
 
 ### Reportando Bugs
 

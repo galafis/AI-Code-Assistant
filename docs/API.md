@@ -1,4 +1,4 @@
-# AI Code Assistant API Documentation
+# Code Assistant API Documentation
 
 ## WebSocket Endpoints
 

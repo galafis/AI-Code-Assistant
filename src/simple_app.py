@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AI Code Assistant
+Code Assistant
 Intelligent code assistance and generation system
 Author: Gabriel Demetrios Lafis
 """
@@ -49,7 +49,7 @@ class CodeResponse:
     timestamp: datetime
 
 class AICodeAssistant:
-    """Main AI Code Assistant class"""
+    """Main Code Assistant class"""
     
     def __init__(self):
         self.api_key = os.getenv('OPENAI_API_KEY')
@@ -285,7 +285,7 @@ def example_function():
     This is a demo function created by Gabriel Demetrios Lafis.
     Configure OpenAI API for full AI-powered code generation.
     """
-    print("Hello from AI Code Assistant!")
+    print("Hello from Code Assistant!")
     return "Demo result"
 
 if __name__ == "__main__":
@@ -300,7 +300,7 @@ function exampleFunction() {{
      * This is a demo function created by Gabriel Demetrios Lafis.
      * Configure OpenAI API for full AI-powered code generation.
      */
-    console.log("Hello from AI Code Assistant!");
+    console.log("Hello from Code Assistant!");
     return "Demo result";
 }}
 
@@ -347,7 +347,7 @@ HTML_TEMPLATE = """
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Code Assistant</title>
+    <title>Code Assistant</title>
     <style>
         * {
             margin: 0;
@@ -446,7 +446,7 @@ HTML_TEMPLATE = """
 </head>
 <body>
     <div class="container">
-        <h1>🤖 AI Code Assistant</h1>
+        <h1>🤖 Code Assistant</h1>
         
         <div class="feature-grid">
             <div class="feature-card">
@@ -710,6 +710,6 @@ def not_found(error):
     }), 404
 
 if __name__ == '__main__':
-    logger.info("Starting AI Code Assistant")
+    logger.info("Starting Code Assistant")
     logger.info("Author: Gabriel Demetrios Lafis")
     app.run(debug=True, host='0.0.0.0', port=5000)

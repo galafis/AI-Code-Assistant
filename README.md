@@ -1,6 +1,6 @@
 
 
-# Advanced AI Code Assistant
+# Advanced Code Assistant
 
 **Autor:** Gabriel Demetrios Lafis
 
@@ -10,12 +10,16 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-yellow?style=for-the-badge&logo=javascript&logoColor=black)
 ![WebSocket](https://img.shields.io/badge/WebSocket-Real--Time-blue?style=for-the-badge&logo=websocket&logoColor=white)
 ![Monaco Editor](https://img.shields.io/badge/Monaco-Editor-blue?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![License](https://img.shields.io/github/license/galafis/AI-Code-Assistant?style=for-the-badge)
-![Stars](https://img.shields.io/github/stars/galafis/AI-Code-Assistant?style=for-the-badge)
+![License](https://img.shields.io/github/license/galafis/Code-Assistant?style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/galafis/Code-Assistant?style=for-the-badge)
 
-[**Ver Código no GitHub**](https://github.com/galafis/AI-Code-Assistant) | [**Documentação Completa**](https://github.com/galafis/AI-Code-Assistant/blob/main/README.md)
 
-![Advanced AI Code Assistant](./advanced-hero-image.png)
+[**Ver Código no GitHub**](https://github.com/galafis/Code-Assistant/) | [**Documentação Completa**](https://github.com/galafis/Code-Assistant/blob/main/README.md/)
+
+![Advanced Code Assistant](./advanced-hero-image.png)
+
+\n![Collaboration Flow](./frontend/assets/collaboration-flow.png)\n\n![Concept Flow Diagram](./frontend/assets/concept-flow-diagram.png)
+
 
 ## 📁 Estrutura do Projeto
 
@@ -40,13 +44,13 @@
 
 ---
 
-## 🇧🇷 Assistente de Código com IA Avançado
+## 🇧🇷 Assistente de Código Avançado
 
 ### Visão Geral
 
 Este projeto é um assistente de código de nível profissional, construído com Python, Flask e o editor Monaco, que oferece uma experiência de desenvolvimento colaborativa e inteligente em tempo real. A aplicação integra um modelo de linguagem de grande escala (LLM) para fornecer funcionalidades avançadas de assistência de código, como geração de testes, revisão de código e análise de segurança.
 
-Com suporte para mais de 15 linguagens de programação, análise de código em tempo real e colaboração simultânea via WebSockets, este projeto é uma demonstração poderosa de como a IA pode ser integrada em ferramentas de desenvolvimento para aumentar a produtividade e a qualidade do código.
+Com suporte para mais de 15 linguagens de programação, análise de código em tempo real e colaboração simultânea via WebSockets, este projeto é uma demonstração poderosa de como a assistência inteligente pode ser integrada em ferramentas de desenvolvimento para aumentar a produtividade e a qualidade do código.
 
 ### Funcionalidades Principais
 
@@ -56,19 +60,19 @@ Com suporte para mais de 15 linguagens de programação, análise de código em 
 
 - **Colaboração Simultânea**: Múltiplos usuários podem editar o mesmo arquivo de código simultaneamente, com as alterações sendo sincronizadas em tempo real para todos os participantes através de WebSockets. A presença de cursores de outros usuários é exibida no editor.
 
-- **Assistente de IA com LLM**: O assistente de IA, alimentado por um modelo de linguagem de grande escala, oferece várias funcionalidades inteligentes:
+- **Assistente de Código Inteligente com LLM**: O assistente de código inteligente, alimentado por um modelo de linguagem de grande escala, oferece várias funcionalidades inteligentes: 
     - **Geração de Testes Unitários**: Gera automaticamente testes unitários para o código selecionado.
     - **Revisão de Código**: Analisa o código em busca de bugs, vulnerabilidades e problemas de estilo, fornecendo sugestões de melhoria.
     - **Análise de Segurança**: Realiza uma análise de segurança no código para identificar potenciais vulnerabilidades.
     - **Otimização de Código**: Sugere otimizações de performance para o código.
 
-- **Suporte a Múltiplas Linguagens**: O assistente de IA e o editor de código suportam uma ampla gama de linguagens, incluindo Python, JavaScript, Java, C++, Go, Rust, e muitas outras.
+- **Suporte a Múltiplas Linguagens**: O assistente de código inteligente e o editor de código suportam uma ampla gama de linguagens, incluindo Python, JavaScript, Java, C++, Go, Rust, e muitas outras.
 
 - **Interface de Usuário Moderna**: A interface, construída com HTML, CSS e JavaScript, é limpa, intuitiva e focada na experiência do desenvolvedor.
 
 ### Arquitetura do Sistema
 
-O diagrama a seguir ilustra a arquitetura do Assistente de Código com IA Avançado:
+O diagrama a seguir ilustra a arquitetura do Assistente de Código Avançado com Assistência Inteligente:  
 
 ```mermaid
 graph TD
@@ -83,12 +87,12 @@ graph TD
         B --> F[WebSocket Server]
         C --> G[REST API Server]
         F --> H[Engine de Colaboração]
-        G --> I[Engine do Assistente IA]
+        G --> I[Engine do Assistente de Código]
         G --> J[Analisador de Código]
         G --> K[Gerador de Testes]
     end
 
-    subgraph "Serviços de IA"
+    subgraph "Serviços de Inteligência Artificial"
         I --> L[OpenAI API]
         J --> M[Análise Estática]
         K --> N[Template Engine]
@@ -112,8 +116,8 @@ graph TD
 1.  **Clone o repositório:**
 
     ```bash
-    git clone https://github.com/galafis/AI-Code-Assistant.git
-    cd AI-Code-Assistant
+    git clone https://github.com/galafis/Code-Assistant.git
+    cd Code-Assistant
     ```
 
 2.  **Crie e ative um ambiente virtual:**
@@ -140,7 +144,7 @@ graph TD
 5.  **Execute a aplicação:**
 
     ```bash
-    python advanced_ai_assistant.py
+    python advanced_code_assistant.py
     ```
 
 6.  **Acesse a aplicação:**
@@ -149,13 +153,13 @@ graph TD
 
 ---
 
-## 🇺🇸 Advanced AI Code Assistant
+## 🇺🇸 Advanced Code Assistant
 
 ### Overview
 
-This project is a professional-grade AI code assistant, built with Python, Flask, and the Monaco editor, that offers a collaborative and intelligent real-time development experience. The application integrates a large language model (LLM) to provide advanced code assistance features, such as test generation, code review, and security analysis.
+This project is a professional-grade code assistant, built with Python, Flask, and the Monaco editor, that offers a collaborative and intelligent real-time development experience. The application integrates a large language model (LLM) to provide advanced code assistance features, such as test generation, code review, and security analysis.
 
-With support for over 15 programming languages, real-time code analysis, and simultaneous collaboration via WebSockets, this project is a powerful demonstration of how AI can be integrated into development tools to increase productivity and code quality.
+With support for over 15 programming languages, real-time code analysis, and simultaneous collaboration via WebSockets, this project is a powerful demonstration of how intelligent assistance can be integrated into development tools to increase productivity and code quality.
 
 ### Key Features
 
@@ -165,19 +169,19 @@ With support for over 15 programming languages, real-time code analysis, and sim
 
 - **Simultaneous Collaboration**: Multiple users can edit the same code file simultaneously, with changes being synchronized in real-time for all participants via WebSockets. The presence of other users' cursors is displayed in the editor.
 
-- **AI Assistant with LLM**: The AI assistant, powered by a large language model, offers several intelligent features:
+- **Intelligent Code Assistant with LLM**: The intelligent code assistant, powered by a large language model, offers several intelligent features:
     - **Unit Test Generation**: Automatically generates unit tests for the selected code.
     - **Code Review**: Analyzes the code for bugs, vulnerabilities, and style issues, providing suggestions for improvement.
     - **Security Analysis**: Performs a security analysis on the code to identify potential vulnerabilities.
     - **Code Optimization**: Suggests performance optimizations for the code.
 
-- **Multi-language Support**: The AI assistant and code editor support a wide range of languages, including Python, JavaScript, Java, C++, Go, Rust, and many others.
+- **Multi-language Support**: The intelligent code assistant and code editor support a wide range of languages, including Python, JavaScript, Java, C++, Go, Rust, and many others.
 
 - **Modern User Interface**: The interface, built with HTML, CSS, and JavaScript, is clean, intuitive, and focused on the developer experience.
 
 ### System Architecture
 
-The following diagram illustrates the architecture of the Advanced AI Code Assistant:
+The following diagram illustrates the architecture of the Advanced Code Assistant with Intelligent Assistance: 
 
 ```mermaid
 graph TD
@@ -190,7 +194,7 @@ graph TD
         B --> D[WebSocket Server]
         C --> E[API REST Server]
         D --> F{Collaboration Engine}
-        E --> G{AI Assistant Engine}
+        E --> G{Intelligent Assistant Engine}
     end
 
     subgraph "Artificial Intelligence"
@@ -205,8 +209,8 @@ graph TD
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/galafis/AI-Code-Assistant.git
-    cd AI-Code-Assistant
+    git clone https://github.com/galafis/Code-Assistant.git
+    cd Code-Assistant
     ```
 
 2.  **Create and activate a virtual environment:**
@@ -233,10 +237,18 @@ graph TD
 5.  **Run the application:**
 
     ```bash
-    python advanced_ai_assistant.py
+    python advanced_code_assistant.py
     ```
 
 6.  **Access the application:**
 
     Open your browser and go to `http://127.0.0.1:5000`.
+
+
+
+
+## 🌐 GitHub Pages
+
+Este projeto está disponível publicamente através do GitHub Pages. Você pode acessá-lo em: [https://galafis.github.io/Code-Assistant/](https://galafis.github.io/Code-Assistant/)
+
 

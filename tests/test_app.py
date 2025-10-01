@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Unit tests for AI Code Assistant
+Unit tests for Code Assistant
 Author: Gabriel Demetrios Lafis
 """
 

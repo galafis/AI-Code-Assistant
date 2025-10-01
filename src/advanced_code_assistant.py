@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Advanced AI Code Assistant
+Advanced Code Assistant
 Intelligent code generation, analysis, and collaboration platform
 Author: Gabriel Demetrios Lafis
 """
@@ -127,7 +127,7 @@ class CollaborationSession:
 class DatabaseManager:
     """Manages SQLite database operations"""
     
-    def __init__(self, db_path: str = "ai_assistant.db"):
+    def __init__(self, db_path: str = "code_assistant.db"):
         self.db_path = db_path
         self.init_database()
     
@@ -561,8 +561,8 @@ class CodeAnalyzer:
             timestamp=datetime.now()
         )
 
-class AICodeAssistant:
-    """Advanced AI-powered code assistant"""
+class CodeAssistant(CodeAnalyzer):
+    """Advanced Intelligent code assistant"""
     
     def __init__(self):
         self.openai_client = None
@@ -900,7 +900,7 @@ ADVANCED_HTML_TEMPLATE = """
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced AI Code Assistant</title>
+    <title>Advanced Code Assistant</title>
     <script src="https://unpkg.com/monaco-editor@0.34.0/min/vs/loader.js"></script>
     <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -1157,7 +1157,7 @@ ADVANCED_HTML_TEMPLATE = """
 </head>
 <body>
     <div class="header">
-        <h1>🤖 Advanced AI Code Assistant</h1>
+        <h1>🤖 Advanced Code Assistant</h1>
         <p>Intelligent code generation, analysis, and collaboration platform</p>
     </div>
     
@@ -1298,7 +1298,7 @@ ADVANCED_HTML_TEMPLATE = """
         require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@0.34.0/min/vs' }});
         require(['vs/editor/editor.main'], function () {
             editor = monaco.editor.create(document.getElementById('editor'), {
-                value: '# Welcome to Advanced AI Code Assistant\\n# Start typing or use AI features to generate code\\n\\ndef hello_world():\\n    print("Hello, World!")\\n    return "Hello, World!"\\n\\nif __name__ == "__main__":\\n    hello_world()',
+                value: '# Welcome to Advanced Code Assistant\\n# Start typing or use AI features to generate code\\n\\ndef hello_world():\\n    print("Hello, World!")\\n    return "Hello, World!"\\n\\nif __name__ == "__main__":\\n    hello_world()',
                 language: 'python',
                 theme: 'vs-dark',
                 automaticLayout: true,
@@ -1651,7 +1651,7 @@ ADVANCED_HTML_TEMPLATE = """
                     task_type: 'welcome',
                     confidence: 1.0,
                     processing_time: 0,
-                    explanation: 'Welcome to the Advanced AI Code Assistant! Start by writing code or describing what you want to create.',
+                    explanation: 'Welcome to the Advanced Code Assistant! Start by writing code or describing what you want to create.',
                     suggestions: [
                         'Try the code generation feature',
                         'Use code completion for faster development',
@@ -1916,6 +1916,6 @@ def status():
     })
 
 if __name__ == '__main__':
-    logger.info("Starting Advanced AI Code Assistant")
+    logger.info("Starting Advanced Code Assistant")
     logger.info("Author: Gabriel Demetrios Lafis")
     socketio.run(app, debug=True, host='0.0.0.0', port=5000)

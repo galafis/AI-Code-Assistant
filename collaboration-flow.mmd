@@ -2,7 +2,7 @@ sequenceDiagram
     participant U1 as User 1 (Developer A)
     participant U2 as User 2 (Developer B)
     participant WS as WebSocket Server
-    participant AI as AI Assistant
+    participant CA as Code Assistant
     participant DB as Code Database
     participant LLM as Language Model
 
@@ -23,17 +23,17 @@ sequenceDiagram
     WS->>U1: Broadcast code change
     WS->>DB: Save code state
 
-    U1->>AI: Request code review
-    AI->>LLM: Analyze code for issues
-    LLM->>AI: Return analysis results
-    AI->>WS: Send review feedback
+    U1->>CA: Request code review
+    CA->>LLM: Analyze code for issues
+    LLM->>CA: Return analysis results
+    CA->>WS: Send review feedback
     WS->>U1: Display review results
     WS->>U2: Display review results
 
-    U2->>AI: Generate unit tests
-    AI->>LLM: Generate test cases
-    LLM->>AI: Return test code
-    AI->>WS: Send generated tests
+    U2->>CA: Generate unit tests
+    CA->>LLM: Generate test cases
+    LLM->>CA: Return test code
+    CA->>WS: Send generated tests
     WS->>U1: Display generated tests
     WS->>U2: Display generated tests
 
