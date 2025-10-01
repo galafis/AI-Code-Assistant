@@ -1,10 +1,15 @@
-> Este README.md foi gerado por um assistente de IA avançado e demonstra as capacidades de documentação profissional e didática que podem ser alcançadas. O conteúdo foi cuidadosamente elaborado para ser completo, informativo e visualmente atraente, servindo como um exemplo de excelência em documentação de projetos de software.
+
 
 # Advanced AI Code Assistant
 
 **Autor:** Gabriel Demetrios Lafis
 
-![Build Status](https://img.shields.io/github/actions/workflow/status/galafis/AI-Code-Assistant/ci-cd.yml?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-2.3.0-green?style=for-the-badge&logo=flask&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-API-black?style=for-the-badge&logo=openai&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-yellow?style=for-the-badge&logo=javascript&logoColor=black)
+![WebSocket](https://img.shields.io/badge/WebSocket-Real--Time-blue?style=for-the-badge&logo=websocket&logoColor=white)
+![Monaco Editor](https://img.shields.io/badge/Monaco-Editor-blue?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![License](https://img.shields.io/github/license/galafis/AI-Code-Assistant?style=for-the-badge)
 ![Stars](https://img.shields.io/github/stars/galafis/AI-Code-Assistant?style=for-the-badge)
 
