@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Code Assistant - Advanced AI-powered code generation and assistance platform">
+    <meta name="keywords" content="AI, Code Assistant, Programming, Machine Learning, Python, JavaScript">
+    <meta name="author" content="Gabriel Demetrios Lafis">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AI Code Assistant">
+    <meta property="og:description" content="Advanced AI-powered code generation and assistance platform">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://galafis.github.io/AI-Code-Assistant/">
+    <meta property="og:image" content="https://galafis.github.io/AI-Code-Assistant/advanced-hero-image.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Code Assistant">
+    <meta name="twitter:description" content="Advanced AI-powered code generation and assistance platform">
+    <meta name="twitter:image" content="https://galafis.github.io/AI-Code-Assistant/advanced-hero-image.png">
+    
+    <title>AI Code Assistant - Gabriel Demetrios Lafis</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #667eea;
+        }
+        
+        main {
+            margin-top: 80px;
+            padding: 2rem 0;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin: 2rem 0;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: #fff;
+            color: #667eea;
+        }
+        
+        .btn-primary:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+        
+        .features {
+            background: white;
+            padding: 4rem 0;
+            margin: 2rem 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .features h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #333;
+            font-size: 2.5rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .tech-stack {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem 0;
+            margin: 2rem 0;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+        }
+        
+        .tech-stack h2 {
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .tech-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .tech-item:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🤖 AI Code Assistant</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#tech">Technology</a></li>
+                <li><a href="https://github.com/galafis/AI-Code-Assistant">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="home" class="hero">
+            <h1>AI Code Assistant</h1>
+            <p>Advanced AI-powered code generation and assistance platform that revolutionizes the way developers write, debug, and optimize code.</p>
+            
+            <img src="../advanced-hero-image.png" alt="AI Code Assistant Hero Image" class="hero-image">
+            
+            <div class="cta-buttons">
+                <a href="https://github.com/galafis/AI-Code-Assistant" class="btn btn-primary">View on GitHub</a>
+                <a href="API.md" class="btn btn-secondary">API Documentation</a>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Intelligent Code Generation</h3>
+                    <p>Advanced AI algorithms that understand context and generate high-quality code snippets in multiple programming languages.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Code Analysis & Debugging</h3>
+                    <p>Comprehensive code analysis with intelligent debugging suggestions and performance optimization recommendations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-time Assistance</h3>
+                    <p>Instant code completion, syntax checking, and intelligent suggestions as you type, boosting productivity significantly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Multi-language Support</h3>
+                    <p>Support for Python, JavaScript, Java, C++, and many other programming languages with specialized AI models.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure & Private</h3>
+                    <p>Enterprise-grade security with local processing options to ensure your code remains private and secure.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Performance Optimized</h3>
+                    <p>Lightning-fast response times with optimized AI models designed for real-time code assistance and generation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tech" class="tech-stack">
+            <h2>Technology Stack</h2>
+            <p>Built with cutting-edge technologies for maximum performance and reliability</p>
+            <div class="tech-grid">
+                <div class="tech-item">Python</div>
+                <div class="tech-item">TensorFlow</div>
+                <div class="tech-item">PyTorch</div>
+                <div class="tech-item">FastAPI</div>
+                <div class="tech-item">React</div>
+                <div class="tech-item">TypeScript</div>
+                <div class="tech-item">Docker</div>
+                <div class="tech-item">Kubernetes</div>
+                <div class="tech-item">PostgreSQL</div>
+                <div class="tech-item">Redis</div>
+                <div class="tech-item">OpenAI API</div>
+                <div class="tech-item">Hugging Face</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Gabriel Demetrios Lafis. All rights reserved.</p>
+            <p>AI Code Assistant - Empowering developers with intelligent code assistance</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Animate feature cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
