@@ -10,16 +10,19 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-yellow?style=for-the-badge&logo=javascript&logoColor=black)
 ![WebSocket](https://img.shields.io/badge/WebSocket-Real--Time-blue?style=for-the-badge&logo=websocket&logoColor=white)
 ![Monaco Editor](https://img.shields.io/badge/Monaco-Editor-blue?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![License](https://img.shields.io/github/license/galafis/Code-Assistant?style=for-the-badge)
-![Stars](https://img.shields.io/github/stars/galafis/Code-Assistant?style=for-the-badge)
+![License](https://img.shields.io/github/license/galafis/AI-Code-Assistant?style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/galafis/AI-Code-Assistant?style=for-the-badge)
 
 
-[**Ver Código no GitHub**](https://github.com/galafis/Code-Assistant/) | [**Documentação Completa**](https://github.com/galafis/Code-Assistant/blob/main/README.md/)
+[**Ver Código no GitHub**](https://github.com/galafis/AI-Code-Assistant/) | [**Documentação Completa**](https://github.com/galafis/AI-Code-Assistant/blob/main/README.md/)
 
-![Advanced Code Assistant](./new-advanced-hero-image.png)
+![Advanced Code Assistant](./advanced-hero-image.png)
 
 
-\n![Collaboration Flow](./frontend/assets/collaboration-flow.png)\n\n![Concept Flow Diagram](./frontend/assets/concept-flow-diagram.png)
+![Collaboration Flow](./frontend/assets/collaboration-flow.png)
+
+![Concept Flow Diagram](./frontend/assets/concept-flow-diagram.png)
+
 
 
 ## 📁 Estrutura do Projeto
@@ -117,8 +120,8 @@ graph TD
 1.  **Clone o repositório:**
 
     ```bash
-    git clone https://github.com/galafis/Code-Assistant.git
-    cd Code-Assistant
+    git clone https://github.com/galafis/AI-Code-Assistant.git
+    cd AI-Code-Assistant
     ```
 
 2.  **Crie e ative um ambiente virtual:**
@@ -210,8 +213,8 @@ graph TD
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/galafis/Code-Assistant.git
-    cd Code-Assistant
+    git clone https://github.com/galafis/AI-Code-Assistant.git
+    cd AI-Code-Assistant
     ```
 
 2.  **Create and activate a virtual environment:**
@@ -250,6 +253,6 @@ graph TD
 
 ## 🌐 GitHub Pages
 
-Este projeto está disponível publicamente através do GitHub Pages. Você pode acessá-lo em: [https://galafis.github.io/Code-Assistant/](https://galafis.github.io/Code-Assistant/)
+Este projeto está disponível publicamente através do GitHub Pages. Você pode acessá-lo em: [https://galafis.github.io/AI-Code-Assistant/](https://galafis.github.io/AI-Code-Assistant/)
 
 
