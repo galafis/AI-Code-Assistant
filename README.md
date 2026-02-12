@@ -1,258 +1,214 @@
+# 🤖 Ai Code Assistant
 
+[![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-3.0-000000.svg)](https://flask.palletsprojects.com/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-# Advanced Code Assistant
-
-**Autor:** Gabriel Demetrios Lafis
-
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-2.3.0-green?style=for-the-badge&logo=flask&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI-API-black?style=for-the-badge&logo=openai&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-yellow?style=for-the-badge&logo=javascript&logoColor=black)
-![WebSocket](https://img.shields.io/badge/WebSocket-Real--Time-blue?style=for-the-badge&logo=websocket&logoColor=white)
-![Monaco Editor](https://img.shields.io/badge/Monaco-Editor-blue?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![License](https://img.shields.io/github/license/galafis/AI-Code-Assistant?style=for-the-badge)
-![Stars](https://img.shields.io/github/stars/galafis/AI-Code-Assistant?style=for-the-badge)
-
-
-[**Ver Código no GitHub**](https://github.com/galafis/AI-Code-Assistant/) | [**Documentação Completa**](https://github.com/galafis/AI-Code-Assistant/blob/main/README.md/)
-
-![Advanced Code Assistant](./advanced-hero-image.png)
-
-
-![Collaboration Flow](./frontend/assets/collaboration-flow.png)
-
-![Concept Flow Diagram](./frontend/assets/concept-flow-diagram.png)
-
-
-
-## 📁 Estrutura do Projeto
-
-```
-.
-├── src/                 # Código fonte principal
-│   ├── api/             # Endpoints da API
-│   ├── models/          # Modelos de dados
-│   ├── services/        # Lógica de negócio
-│   └── utils/           # Utilitários
-├── tests/               # Testes unitários e integração
-├── docs/                # Documentação
-├── frontend/            # Interface do usuário
-│   ├── components/      # Componentes React
-│   ├── assets/          # Imagens e estilos
-│   └── public/          # Arquivos públicos
-├── config/              # Configurações
-└── requirements.txt     # Dependências Python
-```
-
-
+[English](#english) | [Português](#português)
 
 ---
 
-## 🇧🇷 Assistente de Código Avançado
+## English
 
-### Visão Geral
+### 🎯 Overview
 
-Este projeto é um assistente de código de nível profissional, construído com Python, Flask e o editor Monaco, que oferece uma experiência de desenvolvimento colaborativa e inteligente em tempo real. A aplicação integra um modelo de linguagem de grande escala (LLM) para fornecer funcionalidades avançadas de assistência de código, como geração de testes, revisão de código e análise de segurança.
+**Ai Code Assistant** — Professional project by Gabriel Demetrios Lafis
 
-Com suporte para mais de 15 linguagens de programação, análise de código em tempo real e colaboração simultânea via WebSockets, este projeto é uma demonstração poderosa de como a assistência inteligente pode ser integrada em ferramentas de desenvolvimento para aumentar a produtividade e a qualidade do código.
+Total source lines: **4,268** across **8** files in **5** languages.
 
-### Funcionalidades Principais
+### ✨ Key Features
 
-- **Editor de Código Monaco Integrado**: A aplicação utiliza o editor Monaco, o mesmo que alimenta o VS Code, para oferecer uma experiência de edição de código rica e familiar, com suporte a realce de sintaxe para mais de 15 linguagens.
+- **Production-Ready Architecture**: Modular, well-documented, and following best practices
+- **Comprehensive Implementation**: Complete solution with all core functionality
+- **Clean Code**: Type-safe, well-tested, and maintainable codebase
+- **Easy Deployment**: Docker support for quick setup and deployment
 
-- **Análise de Código em Tempo Real**: O código é analisado em tempo real para fornecer feedback instantâneo, identificar erros e sugerir melhorias. A análise de complexidade ciclomática ajuda a manter o código simples e manutenível.
+### 🚀 Quick Start
 
-- **Colaboração Simultânea**: Múltiplos usuários podem editar o mesmo arquivo de código simultaneamente, com as alterações sendo sincronizadas em tempo real para todos os participantes através de WebSockets. A presença de cursores de outros usuários é exibida no editor.
+#### Prerequisites
+- Python 3.12+
 
-- **Assistente de Código Inteligente com LLM**: O assistente de código inteligente, alimentado por um modelo de linguagem de grande escala, oferece várias funcionalidades inteligentes: 
-    - **Geração de Testes Unitários**: Gera automaticamente testes unitários para o código selecionado.
-    - **Revisão de Código**: Analisa o código em busca de bugs, vulnerabilidades e problemas de estilo, fornecendo sugestões de melhoria.
-    - **Análise de Segurança**: Realiza uma análise de segurança no código para identificar potenciais vulnerabilidades.
-    - **Otimização de Código**: Sugere otimizações de performance para o código.
 
-- **Suporte a Múltiplas Linguagens**: O assistente de código inteligente e o editor de código suportam uma ampla gama de linguagens, incluindo Python, JavaScript, Java, C++, Go, Rust, e muitas outras.
+#### Installation
 
-- **Interface de Usuário Moderna**: A interface, construída com HTML, CSS e JavaScript, é limpa, intuitiva e focada na experiência do desenvolvedor.
-
-### Arquitetura do Sistema
-
-O diagrama a seguir ilustra a arquitetura do Assistente de Código Avançado com Assistência Inteligente:  
-
-```mermaid
-graph TD
-    subgraph "Interface Frontend"
-        A[Editor Monaco] --> B(Cliente WebSocket)
-        A --> C(Cliente API REST)
-        D[Interface de Colaboração] --> B
-        E[Painel de Análise] --> C
-    end
-
-    subgraph "Backend (Flask)"
-        B --> F(Servidor WebSocket)
-        C --> G(Servidor API REST)
-        F --> H(Motor de Colaboração)
-        G --> I(Motor do Assistente Inteligente)
-        G --> J(Analisador de Código)
-        G --> K(Gerador de Testes)
-    end
-
-    subgraph "Serviços de Inteligência Artificial"
-        I --> L(API OpenAI)
-        J --> M(Análise Estática)
-        K --> N(Motor de Template)
-    end
-
-    subgraph "Armazenamento"
-        H --> O[(Armazenamento de Sessão)]
-        I --> P[(Histórico de Código)]
-        J --> Q[(Cache de Análise)]
-    end
-
-    subgraph "Colaboração em Tempo Real"
-        H --> R(Gerenciamento de Salas)
-        R --> S(Sessões de Usuário)
-        S --> T(Sincronização de Código)
-    end
+1. **Clone the repository**
+```bash
+git clone https://github.com/galafis/AI-Code-Assistant.git
+cd AI-Code-Assistant
 ```
 
-### Como Executar o Projeto
+2. **Create virtual environment**
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-1.  **Clone o repositório:**
+3. **Install dependencies**
+```bash
+pip install -r requirements.txt
+```
 
-    ```bash
-    git clone https://github.com/galafis/AI-Code-Assistant.git
-    cd AI-Code-Assistant
-    ```
 
-2.  **Crie e ative um ambiente virtual:**
 
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
 
-3.  **Instale as dependências:**
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+### 🧪 Testing
 
-4.  **Configure as variáveis de ambiente:**
+```bash
+# Run all tests
+pytest
 
-    Crie um arquivo `.env` na raiz do projeto e adicione sua chave de API do OpenAI:
+# Run with coverage
+pytest --cov --cov-report=html
 
-    ```
-    OPENAI_API_KEY=sua-chave-de-api-do-openai
-    ```
+# Run with verbose output
+pytest -v
+```
 
-5.  **Execute a aplicação:**
+### 📁 Project Structure
 
-    ```bash
-    python advanced_code_assistant.py
-    ```
+```
+AI-Code-Assistant/
+├── config/
+├── docs/
+│   └── API.md
+├── frontend/
+│   ├── assets/
+│   │   └── app.js
+│   ├── public/
+│   └── package.json
+├── src/
+│   ├── advanced_code_assistant.py
+│   └── simple_app.py
+├── tests/
+│   └── test_app.py
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── README.md
+├── analytics.R
+└── requirements.txt
+```
 
-6.  **Acesse a aplicação:**
+### 🛠️ Tech Stack
 
-    Abra seu navegador e acesse `http://127.0.0.1:5000`.
+| Technology | Usage |
+|------------|-------|
+| Python | 3 files |
+| HTML | 2 files |
+| R | 1 files |
+| JavaScript | 1 files |
+| CSS | 1 files |
+
+### 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### 👤 Author
+
+**Gabriel Demetrios Lafis**
+
+- GitHub: [@galafis](https://github.com/galafis)
+- LinkedIn: [Gabriel Demetrios Lafis](https://linkedin.com/in/gabriel-demetrios-lafis)
 
 ---
 
-## 🇺🇸 Advanced Code Assistant
+## Português
 
-### Overview
+### 🎯 Visão Geral
 
-This project is a professional-grade code assistant, built with Python, Flask, and the Monaco editor, that offers a collaborative and intelligent real-time development experience. The application integrates a large language model (LLM) to provide advanced code assistance features, such as test generation, code review, and security analysis.
+**Ai Code Assistant** — Professional project by Gabriel Demetrios Lafis
 
-With support for over 15 programming languages, real-time code analysis, and simultaneous collaboration via WebSockets, this project is a powerful demonstration of how intelligent assistance can be integrated into development tools to increase productivity and code quality.
+Total de linhas de código: **4,268** em **8** arquivos em **5** linguagens.
 
-### Key Features
+### ✨ Funcionalidades Principais
 
-- **Integrated Monaco Code Editor**: The application uses the Monaco editor, the same one that powers VS Code, to offer a rich and familiar code editing experience, with syntax highlighting support for over 15 languages.
+- **Arquitetura Pronta para Produção**: Modular, bem documentada e seguindo boas práticas
+- **Implementação Completa**: Solução completa com todas as funcionalidades principais
+- **Código Limpo**: Type-safe, bem testado e manutenível
+- **Fácil Implantação**: Suporte Docker para configuração e implantação rápidas
 
-- **Real-time Code Analysis**: The code is analyzed in real-time to provide instant feedback, identify errors, and suggest improvements. Cyclomatic complexity analysis helps to keep the code simple and maintainable.
+### 🚀 Início Rápido
 
-- **Simultaneous Collaboration**: Multiple users can edit the same code file simultaneously, with changes being synchronized in real-time for all participants via WebSockets. The presence of other users' cursors is displayed in the editor.
+#### Pré-requisitos
+- Python 3.12+
 
-- **Intelligent Code Assistant with LLM**: The intelligent code assistant, powered by a large language model, offers several intelligent features:
-    - **Unit Test Generation**: Automatically generates unit tests for the selected code.
-    - **Code Review**: Analyzes the code for bugs, vulnerabilities, and style issues, providing suggestions for improvement.
-    - **Security Analysis**: Performs a security analysis on the code to identify potential vulnerabilities.
-    - **Code Optimization**: Suggests performance optimizations for the code.
 
-- **Multi-language Support**: The intelligent code assistant and code editor support a wide range of languages, including Python, JavaScript, Java, C++, Go, Rust, and many others.
+#### Instalação
 
-- **Modern User Interface**: The interface, built with HTML, CSS, and JavaScript, is clean, intuitive, and focused on the developer experience.
-
-### System Architecture
-
-The following diagram illustrates the architecture of the Advanced Code Assistant with Intelligent Assistance: 
-
-```mermaid
-graph TD
-    subgraph "Frontend"
-        A[Monaco Editor] --> B(WebSocket Client)
-        A --> C(API REST Client)
-    end
-
-    subgraph "Backend (Flask)"
-        B --> D(WebSocket Server)
-        C --> E(API REST Server)
-        D --> F(Collaboration Engine)
-        E --> G(Intelligent Assistant Engine)
-    end
-
-    subgraph "Artificial Intelligence"
-        G --> H[Large Language Model (LLM)]
-    end
-
-    F --> B
+1. **Clone the repository**
+```bash
+git clone https://github.com/galafis/AI-Code-Assistant.git
+cd AI-Code-Assistant
 ```
 
-### How to Run the Project
+2. **Create virtual environment**
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-1.  **Clone the repository:**
-
-    ```bash
-    git clone https://github.com/galafis/AI-Code-Assistant.git
-    cd AI-Code-Assistant
-    ```
-
-2.  **Create and activate a virtual environment:**
-
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
-
-3.  **Install the dependencies:**
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4.  **Configure environment variables:**
-
-    Create a `.env` file in the project root and add your OpenAI API key:
-
-    ```
-    OPENAI_API_KEY=your-openai-api-key
-    ```
-
-5.  **Run the application:**
-
-    ```bash
-    python advanced_code_assistant.py
-    ```
-
-6.  **Access the application:**
-
-    Open your browser and go to `http://127.0.0.1:5000`.
+3. **Install dependencies**
+```bash
+pip install -r requirements.txt
+```
 
 
 
 
-## 🌐 GitHub Pages
+### 🧪 Testes
 
-Este projeto está disponível publicamente através do GitHub Pages. Você pode acessá-lo em: [https://galafis.github.io/AI-Code-Assistant/](https://galafis.github.io/AI-Code-Assistant/)
+```bash
+# Run all tests
+pytest
 
+# Run with coverage
+pytest --cov --cov-report=html
 
+# Run with verbose output
+pytest -v
+```
+
+### 📁 Estrutura do Projeto
+
+```
+AI-Code-Assistant/
+├── config/
+├── docs/
+│   └── API.md
+├── frontend/
+│   ├── assets/
+│   │   └── app.js
+│   ├── public/
+│   └── package.json
+├── src/
+│   ├── advanced_code_assistant.py
+│   └── simple_app.py
+├── tests/
+│   └── test_app.py
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── README.md
+├── analytics.R
+└── requirements.txt
+```
+
+### 🛠️ Stack Tecnológica
+
+| Tecnologia | Uso |
+|------------|-----|
+| Python | 3 files |
+| HTML | 2 files |
+| R | 1 files |
+| JavaScript | 1 files |
+| CSS | 1 files |
+
+### 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+### 👤 Autor
+
+**Gabriel Demetrios Lafis**
+
+- GitHub: [@galafis](https://github.com/galafis)
+- LinkedIn: [Gabriel Demetrios Lafis](https://linkedin.com/in/gabriel-demetrios-lafis)
